@@ -1,0 +1,50 @@
+body {
+  padding: 20px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background: url("/images/bg.png") repeat;
+}
+a {
+  color: #00b7ff;
+}
+.container {
+  position: relative;
+  min-height: 100%;
+}
+.content-chat {
+  display: none;
+}
+#chat {
+  border: 1px solid #ccc;
+  height: 200px;
+  margin-bottom: 10px;
+  padding: 10px;
+  overflow: scroll;
+}
+#chat ul {
+  margin: 0;
+  padding: 0;
+}
+#chat ul li {
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 5px;
+  margin-bottom: 5px;
+  list-style: none;
+}
+#comments {
+  overflow: scroll;
+  height: 400px;
+}
+#comments .statusmessage {
+  padding-left: 0;
+}
+#comments .statusmessage .comment-body {
+  padding: 13px 20px 13px;
+}
+.comment-body {
+  padding: 15px 20px 15px;
+}
+#chat-text-box {
+  position: absolute;
+  bottom: -50px;
+  width: 100%;
+}

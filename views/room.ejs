@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title><%= title %></title>
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css">
+  <link href="/stylesheets/theme/style.css" media="screen" rel="stylesheet">
+  <link rel='stylesheet' href='/stylesheets/style.css' />
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+  <script src="/javascripts/handlebars-v1.3.0.js"></script>
+  <script src="/javascripts/socket_handler.js"></script>
+  <script src="/javascripts/clientside.js"></script>
+</head>
+<body>
+
+ <div class="container">
+  <div class="row">
+    <div class="col-lg-4">
+      <a href="/" class="btn btn-left"><span>Sair desta sala</span></a>
+    </div>
+  </div>
+
+  <hr>
+  <div class="row">
+    <div class="col-lg-12">
+      <label for="">Copie e compartilhe a URL desta sala:</label><br/><br/>
+      <input type="text" value="" class="room-url">      
+    </div>
+  </div>
+  
+  <div class="row row-alterar-nome">
+  <hr>
+    <div class="col-lg-4 col-lg-offset-4">
+      <form role="form" id="form-alterar-nome">
+        <div class="form-group" style="text-align: center; padding-top: 30px">
+          <div class="clearfix"></div>
+          <input type="text" class="form-control pull-left" id="nome" placeholder="Informe seu nome" style="width: 100%;margin-bottom: 10px;" autocomplete="off">
+          <div class="clearfix"></div>
+          <a href="javascript:void(0)" class="btn btn-pagination" onClick="$('#form-alterar-nome').submit();" >
+            <span>Alterar nome</span>
+          </a>
+        </div>
+      </form>
+    </div>    
+  </div>
+  <div class="content-chat">
+    <hr>
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="comment-list clearfix" id="comments">
+          <ol></ol>
+        </div>
+      </div>
+    </div>
+    <div id="chat-text-box">
+      <form role="form" id="form-enviar-mensagem">
+        <div class="form-group">
+          <input type="text" class="form-control" id="mensagem" placeholder="O que você está pensando?" autocomplete="off">
+        </div>
+      </form>
+    </div>    
+  </div>
+</div>
+
+<script id="message-template" type="text/x-handlebars-template">
+  <li class="comment">
+    <div class="comment-body">
+      <div class="comment-arrow"></div>
+      <div class="comment-avatar">
+        <div class="avatar"><img src="http://lorempixel.com/57/57" alt="" /></div>
+      </div>
+      <div class="comment-text">
+        <div class="comment-author clearfix">
+          <a href="#" class="link-author">{{author}}</a> <span class="comment-date">{{time}}</span>
+        </div>
+        <div class="comment-entry">
+          {{body}}
+        </div>
+      </div>
+      <div class="clear"></div>
+    </div>
+  </li>      
+</script>
+
+<script id="status-template" type="text/x-handlebars-template">
+  <li class="comment statusmessage">
+    <div class="comment-body">
+      <div class="comment-text">
+        <div class="comment-entry">
+          {{{message}}}
+        </div>
+      </div>
+      <div class="clear"></div>
+    </div>
+  </li>    
+</script>
+</body>
+</html>

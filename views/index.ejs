@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title><%= title %></title>
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/stylesheets/theme/style.css">
+  <link rel='stylesheet' href='/stylesheets/style.css' />
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+  <script src="/javascripts/index.js"></script>
+</head>
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-5 col-xs-offset-4">
+        <a href="#" class="linkto btn btn-large">
+          <span>Criar uma nova sala</span>
+        </a>
+      </div>
+    </div>
+    <hr/>
+    <div class="row">
+      <div class="col-xs-8 col-xs-offset-2" style="text-align: center">
+        <h2>Entrar em uma sala existente</h2>
+        <ul id="list-rooms"></ul>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
